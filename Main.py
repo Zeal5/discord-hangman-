@@ -6,7 +6,7 @@ from random_word import randomword
 
 
 load_dotenv()
-#TOKEN = os.getenv('DISCORD_TOKEN')
+TOKEN = os.getenv('DISCORD_TOKEN')
 intents = discord.Intents.default()
 intents.members = True
 activity = discord.Game(name='hangman')
@@ -109,5 +109,5 @@ async def on_command_error(ctx, error):
         await ctx.send(embed=error_embed) 
      
 
-bot.run(os.environ['TOKEN'])
+bot.run(TOKEN)
 
