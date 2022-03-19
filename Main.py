@@ -9,7 +9,6 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 intents = discord.Intents.default()
 intents.members = True
-#client = discord.Client(intents=intents)
 activity = discord.Game(name='hangman')
 bot = commands.Bot(intents=intents,command_prefix='!',activity = activity, status = 'hangman')
 secret_word = randomword
@@ -108,7 +107,7 @@ async def on_command_error(ctx, error):
         error_embed.description='u need to use atleast 1 letter after !guess'
         error_embed.set_thumbnail(url='https://i1.sndcdn.com/artworks-000477842853-3oivr6-t500x500.jpg')
         await ctx.send(embed=error_embed) 
-        
-    
+     
+
 bot.run(TOKEN)
 
