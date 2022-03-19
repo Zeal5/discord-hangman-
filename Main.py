@@ -109,5 +109,5 @@ async def on_command_error(ctx, error):
         await ctx.send(embed=error_embed) 
      
 
-bot.run(os.environ['TOKEN'])
+bot.run(TOKEN)
 
