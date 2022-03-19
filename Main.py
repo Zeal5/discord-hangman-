@@ -61,14 +61,14 @@ async def guess(ctx, alph):
             return
 
         elif alph in secret_word:
-            in_embed.description=f"{guess_letter} is in the word" #hereeee
+            in_embed.description=f"{guess_letter} is in the word" 
             guess_word += guess_letter           
             for i in secret_word:
                 if i in guess_word:
                     new_word += i
                 else:
                     new_word += '-'
-            in_embed.add_field(name='Guess', value=new_word , )        #hereeee
+            in_embed.add_field(name='Guess', value=new_word , )        
 
             await ctx.send(embed=in_embed)
             new_word = ''
@@ -83,7 +83,7 @@ async def guess(ctx, alph):
             game_won_embed = discord.Embed(title= 'Congratulations',color= 0x096310)
             game_won_embed.description= 'You have Won the Game'
             game_won_embed.set_thumbnail(url='https://image.shutterstock.com/image-vector/hangman-hangwoman-noose-knot-prevention-260nw-1669999099.jpg')
-            await ctx.send(embed=game_won_embed )                     #'congratulations u have won the game'
+            await ctx.send(embed=game_won_embed )                     
         if lives <= 0:
             game_over = True
             game_loose_embed = discord.Embed(title= 'You Lost',color= 0xFF0000)
