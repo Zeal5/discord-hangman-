@@ -6,7 +6,7 @@ from random_word import randomword
 
 
 load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+#TOKEN = os.getenv('DISCORD_TOKEN')
 intents = discord.Intents.default()
 intents.members = True
 activity = discord.Game(name='hangman')
